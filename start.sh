@@ -1,4 +1,4 @@
-#!/bin  /bash
+#!/bin/bash
 set -eu
 
 export PYTHONUNBUFFERED=true
@@ -12,11 +12,11 @@ fi
 
 # Menginstal pip jika tidak ada
 if [ ! -f "$VIRTUALENV/bin/pip" ]; then
-    curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | $VIRTUALENV/bin/python
+    curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | "$VIRTUALENV/bin/python"
 fi
 
 # Menginstal dependensi dari requirements.txt
-$VIRTUALENV/bin/pip install -r requirements.txt
+"$VIRTUALENV/bin/pip" install -r requirements.txt
 
 # Menjalankan aplikasi
-$VIRTUALENV/bin/python app.py
+"$VIRTUALENV/bin/python" app.py
