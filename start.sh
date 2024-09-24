@@ -12,7 +12,7 @@ fi
 
 # Menginstal pip jika tidak ada
 if [ ! -f "$VIRTUALENV/bin/pip" ]; then
-    curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | "$VIRTUALENV/bin/python"
+    curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | $VIRTUALENV/bin/python
 fi
 
 # Menginstal dependensi dari requirements.txt
