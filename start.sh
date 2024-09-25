@@ -16,7 +16,7 @@ if [ ! -f "$VIRTUALENV/bin/pip" ]; then
 fi
 
 # Menginstal dependensi dari requirements.txt
-"$VIRTUALENV/bin/pip" install -r requirements.txt
+$VIRTUALENV/bin/pip install -r requirements.txt
 
 # Menjalankan aplikasi
-"$VIRTUALENV/bin/python" app.py
+$VIRTUALENV/bin/python app.py
